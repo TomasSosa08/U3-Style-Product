@@ -1,192 +1,450 @@
 
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>URBAN STORE - Zapatillas</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="URBAN STORE - Zapatillas y moda urbana.">
+  <title>URBAN STORE | Sneakers & Streetwear</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
 </head>
 
 <body>
 
-    <!-- 1. ENCABEZADO -->
-    <header>
-        <h1>URBAN STORE</h1>
+  <div class="announcement">
+    <span>ENVÍO GRATIS EN COMPRAS SUPERIORES A $150.000</span>
+    <span class="announcement-dot">●</span>
+    <span>3 CUOTAS SIN INTERÉS</span>
+  </div>
 
-        <form>
-            <input type="search" placeholder="Buscar productos...">
-            <button type="submit">Buscar</button>
-        </form>
+  <header class="header" id="inicio">
+    <nav class="navbar">
+      <a href="#inicio" class="logo">URBAN<span>STORE.</span></a>
 
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Hombre</a>
-            <a href="#">Mujer</a>
-            <a href="#">Ofertas</a>
-            <a href="#">Contacto</a>
-        </nav>
-    </header>
+      <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
 
-    <main>
+      <div class="nav-links" id="navLinks">
+        <a href="#inicio">Inicio</a>
+        <a href="#producto">Producto</a>
+        <a href="#coleccion">Colección</a>
+        <a href="#opiniones">Opiniones</a>
+        <a href="#contacto">Contacto</a>
+      </div>
 
-        <!-- 2. PRESENTACIÓN DEL PRODUCTO -->
-        <section>
-            <h2>Zapatillas Urbanas Nike</h2>
+      <button class="cart-button" id="openCart">
+        <span>MI CARRITO</span>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+    </nav>
+  </header>
 
-            <figure>
-                <img
-                    src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700"
-                    alt="Zapatilla deportiva roja"
-                    width="400">
-                <figcaption>Zapatillas deportivas urbanas</figcaption>
-            </figure>
+  <main>
 
-            <p>Estado: Nuevo</p>
-            <p>Marca: Nike</p>
-            <p>Color: Rojo y blanco</p>
-            <p>Disponibilidad: En stock</p>
-            <p>Talles disponibles: 38 al 44</p>
-        </section>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="hero-bg"></div>
 
-        <!-- 3. MÓDULO DE COMPRA -->
-        <section>
-            <h2>Precio y medios de pago</h2>
+      <div class="hero-content reveal">
+        <span class="eyebrow"><span class="status-dot"></span> NUEVA COLECCIÓN 2026</span>
 
-            <p><del>$180.000</del></p>
-            <p><strong>Oferta: $135.000</strong></p>
-            <p>25% de descuento</p>
+        <h1>STEP INTO<br>YOUR <span>STYLE.</span></h1>
 
-            <p>6 cuotas de $22.500</p>
-            <p>Aceptamos tarjetas de crédito, débito y transferencia.</p>
+        <p class="hero-description">
+          No se trata solamente de zapatillas. Se trata de cómo
+          te movés, cómo te expresás y cómo marcás tu propio camino.
+        </p>
 
-            <button>Comprar ahora</button>
-            <button>Agregar al carrito</button>
-        </section>
+        <div class="hero-price">
+          <span class="old-price">$180.000</span>
+          <div class="price-line">
+            <strong>$135.000</strong>
+            <span class="discount">25% OFF</span>
+          </div>
+          <span class="installments">6 cuotas de $22.500</span>
+        </div>
 
-        <!-- 4. FICHA TÉCNICA Y DESCRIPCIÓN -->
-        <section>
-            <h2>Características del producto</h2>
+        <div class="hero-buttons">
+          <a href="#producto" class="button button-primary">DESCUBRIR PRODUCTO ↗</a>
+          <a href="#coleccion" class="button button-secondary">VER COLECCIÓN</a>
+        </div>
 
-            <details>
-                <summary>Ver ficha técnica</summary>
+        <div class="hero-trust">
+          <div>
+            <strong>100%</strong>
+            <span>Original</span>
+          </div>
+          <div>
+            <strong>ENVÍO</strong>
+            <span>A todo el país</span>
+          </div>
+          <div>
+            <strong>SEGURO</strong>
+            <span>Compra protegida</span>
+          </div>
+        </div>
+      </div>
 
-                <ul>
-                    <li>Marca: Nike</li>
-                    <li>Tipo: Zapatillas urbanas</li>
-                    <li>Material exterior: Textil y sintético</li>
-                    <li>Suela: Goma</li>
-                    <li>Color: Rojo y blanco</li>
-                    <li>Talles: 38 al 44</li>
-                </ul>
-            </details>
+      <div class="hero-image-wrap reveal">
+        <div class="image-glow"></div>
+        <span class="hero-image-label">URBAN COLLECTION / 026</span>
 
-            <h3>Descripción</h3>
+        <img
+          class="hero-image"
+          src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700"
+          alt="Zapatilla Nike roja y blanca"
+        >
 
-            <p>
-                Estas zapatillas combinan comodidad y estilo.
-                Son ideales para usar todos los días, salir con amigos
-                o completar un look urbano. Su diseño moderno y su
-                suela resistente permiten utilizarlas en diferentes
-                ocasiones.
-            </p>
-        </section>
+        <div class="floating-card">
+          <span class="floating-icon">✦</span>
+          <div>
+            <strong>URBAN ESSENTIALS</strong>
+            <small>Diseñadas para destacar</small>
+          </div>
+        </div>
+      </div>
 
-        <!-- 5. OPINIONES DE LOS USUARIOS -->
-        <section>
-            <h2>Opiniones de los compradores</h2>
+      <div class="hero-scroll">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
 
-            <article class="opinion">
-                <img
-                    src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=100"
-                    alt="Foto de perfil de Sofía"
-                    width="50">
+    <!-- BENEFICIOS -->
+    <section class="benefits">
+      <div class="benefit">
+        <span class="benefit-icon">↗</span>
+        <div>
+          <strong>ENVÍOS A TODO EL PAÍS</strong>
+          <small>Recibí tu pedido donde estés</small>
+        </div>
+      </div>
 
-                <h3>Sofía Martínez</h3>
-                <time datetime="2026-10-15">15 de octubre de 2026</time>
+      <div class="benefit">
+        <span class="benefit-icon">◇</span>
+        <div>
+          <strong>PRODUCTOS ORIGINALES</strong>
+          <small>Calidad garantizada</small>
+        </div>
+      </div>
 
-                <p>
-                    Me encantaron. Son muy cómodas y tienen un diseño
-                    excelente. Las recomiendo.
-                </p>
-            </article>
+      <div class="benefit">
+        <span class="benefit-icon">◎</span>
+        <div>
+          <strong>COMPRA SEGURA</strong>
+          <small>Pagos protegidos</small>
+        </div>
+      </div>
 
-            <article class="opinion">
-                <img
-                    src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100"
-                    alt="Foto de perfil de Lucas"
-                    width="50">
+      <div class="benefit">
+        <span class="benefit-icon">✧</span>
+        <div>
+          <strong>ATENCIÓN PERSONALIZADA</strong>
+          <small>Estamos para ayudarte</small>
+        </div>
+      </div>
+    </section>
 
-                <h3>Lucas Fernández</h3>
-                <time datetime="2026-10-20">20 de octubre de 2026</time>
+    <!-- PRODUCTO PRINCIPAL -->
+    <section class="section-padding" id="producto">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">01 / PRODUCTO DESTACADO</span>
+          <h2>THE NEXT<br><span>STEP.</span></h2>
+        </div>
+        <p>Un diseño que combina comodidad, personalidad y estilo urbano.</p>
+      </div>
 
-                <p>
-                    Muy buena calidad y llegaron rápido. Estoy muy
-                    conforme con la compra.
-                </p>
-            </article>
+      <div class="featured-product reveal">
+        <div class="featured-image">
+          <span class="product-tag">BEST SELLER</span>
+          <div class="featured-image-glow"></div>
+          <img
+            src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=700"
+            alt="Zapatillas Nike urbanas rojas"
+          >
+          <span class="image-caption">NIKE / URBAN SERIES</span>
+        </div>
 
-        </section>
+        <div class="featured-info">
+          <div class="rating">★★★★★ <span>4.9 / 5 · 128 opiniones</span></div>
 
-        <!-- 6. PRODUCTOS RELACIONADOS -->
-        <aside>
-            <h2>Productos relacionados</h2>
+          <h3>Zapatillas Urbanas Nike</h3>
+          <p class="product-subtitle">RED / WHITE COLLECTION</p>
 
-            <article>
-                <h3>Zapatillas deportivas blancas</h3>
+          <p class="product-description">
+            Estas zapatillas combinan comodidad y estilo. Su diseño
+            moderno y su suela resistente las hacen ideales para el
+            uso diario, salir con amigos o completar cualquier look urbano.
+          </p>
 
-                <img
-                    src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=400"
-                    alt="Zapatillas deportivas blancas"
-                    width="180">
+          <div class="product-options">
+            <div>
+              <span>COLOR</span>
+              <strong>Rojo / Blanco</strong>
+            </div>
+            <div>
+              <span>DISPONIBILIDAD</span>
+              <strong class="in-stock">● En stock</strong>
+            </div>
+          </div>
 
-                <p>$120.000</p>
-            </article>
+          <div class="size-selector">
+            <span>SELECCIONÁ TU TALLE</span>
+            <div class="sizes" id="sizes">
+              <button class="size-button" data-size="38">38</button>
+              <button class="size-button" data-size="39">39</button>
+              <button class="size-button" data-size="40">40</button>
+              <button class="size-button" data-size="41">41</button>
+              <button class="size-button" data-size="42">42</button>
+              <button class="size-button" data-size="43">43</button>
+              <button class="size-button" data-size="44">44</button>
+            </div>
+            <small id="sizeMessage">Elegí un talle para continuar.</small>
+          </div>
 
-            <article>
-                <h3>Zapatillas urbanas negras</h3>
+          <div class="featured-price">
+            <div>
+              <del>$180.000</del>
+              <span class="discount">25% OFF</span>
+            </div>
+            <strong>$135.000</strong>
+            <small>6 cuotas sin interés de $22.500</small>
+          </div>
 
-                <img
-                    src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=400"
-                    alt="Zapatillas deportivas de color oscuro"
-                    width="180">
+          <div class="purchase-actions">
+            <button
+              class="button button-primary add-to-cart"
+              data-name="Zapatillas Urbanas Nike"
+              data-price="135000"
+            >
+              AGREGAR AL CARRITO +
+            </button>
+            <button class="button button-secondary" id="buyNow">COMPRAR AHORA ↗</button>
+          </div>
 
-                <p>$145.000</p>
-            </article>
-        </aside>
+          <p class="payment-note">💳 Visa · Mastercard · Mercado Pago · Transferencia</p>
+        </div>
+      </div>
+    </section>
 
-    </main>
+    <!-- CARACTERÍSTICAS -->
+    <section class="specs-section section-padding" id="caracteristicas">
+      <div class="section-heading centered">
+        <div>
+          <span class="section-kicker">02 / DETALLES DEL PRODUCTO</span>
+          <h2>MADE TO<br><span>MOVE.</span></h2>
+        </div>
+        <p>Todo lo que necesitás para moverte con comodidad y estilo.</p>
+      </div>
 
-    <!-- 7. PIE DE PÁGINA -->
-    <footer>
-        <h2>URBAN STORE</h2>
+      <div class="specs-grid">
+        <article class="spec-card reveal">
+          <span class="spec-number">01 / COMFORT</span>
+          <div class="spec-icon">◈</div>
+          <h3>Comodidad</h3>
+          <p>Diseñadas para acompañarte durante todo el día.</p>
+        </article>
 
-        <section>
-            <h3>Contacto</h3>
-            <p>Email: contacto@urbanstore.com</p>
-            <p>Teléfono: 11-1234-5678</p>
-        </section>
+        <article class="spec-card reveal">
+          <span class="spec-number">02 / DESIGN</span>
+          <div class="spec-icon">✳</div>
+          <h3>Diseño urbano</h3>
+          <p>Una combinación de colores que destaca en cualquier outfit.</p>
+        </article>
 
-        <section>
-            <h3>Ayuda</h3>
-            <a href="#">Preguntas frecuentes</a>
-            <a href="#">Envíos</a>
-            <a href="#">Devoluciones</a>
-        </section>
+        <article class="spec-card reveal">
+          <span class="spec-number">03 / QUALITY</span>
+          <div class="spec-icon">◇</div>
+          <h3>Materiales</h3>
+          <p>Exterior textil y sintético con terminaciones resistentes.</p>
+        </article>
 
-        <section>
-            <h3>Medios de pago</h3>
-            <p>Visa, Mastercard y Mercado Pago.</p>
-        </section>
+        <article class="spec-card reveal">
+          <span class="spec-number">04 / GRIP</span>
+          <div class="spec-icon">⌁</div>
+          <h3>Suela resistente</h3>
+          <p>Suela de goma pensada para el uso cotidiano.</p>
+        </article>
+      </div>
 
-        <section>
-            <h3>Garantía</h3>
-            <p>Todos nuestros productos cuentan con garantía.</p>
-        </section>
+      <div class="technical-panel reveal">
+        <div>
+          <span class="section-kicker">TECHNICAL DETAILS</span>
+          <h3>Ficha técnica.</h3>
+          <p>Información del producto.</p>
+        </div>
 
-        <p>© 2026 URBAN STORE. Todos los derechos reservados.</p>
-    </footer>
+        <div class="technical-list">
+          <div><span>Marca</span><strong>Nike</strong></div>
+          <div><span>Tipo</span><strong>Zapatillas urbanas</strong></div>
+          <div><span>Material exterior</span><strong>Textil y sintético</strong></div>
+          <div><span>Suela</span><strong>Goma</strong></div>
+          <div><span>Color</span><strong>Rojo y blanco</strong></div>
+          <div><span>Talles</span><strong>38 al 44</strong></div>
+          <div><span>Estado</span><strong>Nuevo</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- COLECCIÓN -->
+    <section class="section-padding" id="coleccion">
+      <div class="section-heading">
+        <div>
+          <span class="section-kicker">03 / EXPLORE MORE</span>
+          <h2>FIND YOUR<br><span>PAIR.</span></h2>
+        </div>
+        <p>Descubrí otros modelos para completar tu colección.</p>
+      </div>
+
+      <div class="products-grid">
+        <article class="product-card reveal">
+          <div class="product-card-image">
+            <span class="card-label">URBAN / 001</span>
+            <img
+              src="https://images.unsplash.com/photo-1600185365483-26d7a4cc7519?w=600"
+              alt="Zapatillas deportivas blancas"
+            >
+          </div>
+          <div class="product-card-info">
+            <span class="product-category">DAILY ESSENTIALS</span>
+            <h3>Zapatillas deportivas blancas</h3>
+            <div class="product-card-bottom">
+              <strong>$120.000</strong>
+              <button class="small-add add-to-cart" data-name="Zapatillas deportivas blancas" data-price="120000" aria-label="Agregar zapatillas blancas">+</button>
+            </div>
+          </div>
+        </article>
+
+        <article class="product-card reveal">
+          <div class="product-card-image">
+            <span class="card-label">URBAN / 002</span>
+            <img
+              src="https://images.unsplash.com/photo-1552346154-21d32810aba3?w=600"
+              alt="Zapatillas urbanas negras"
+            >
+          </div>
+          <div class="product-card-info">
+            <span class="product-category">STREET COLLECTION</span>
+            <h3>Zapatillas urbanas negras</h3>
+            <div class="product-card-bottom">
+              <strong>$145.000</strong>
+              <button class="small-add add-to-cart" data-name="Zapatillas urbanas negras" data-price="145000" aria-label="Agregar zapatillas negras">+</button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- OPINIONES -->
+    <section class="reviews-section section-padding" id="opiniones">
+      <div class="section-heading centered">
+        <div>
+          <span class="section-kicker">04 / CUSTOMER REVIEWS</span>
+          <h2>REAL PEOPLE.<br><span>REAL STYLE.</span></h2>
+        </div>
+        <p>La experiencia de quienes ya eligieron URBAN STORE.</p>
+      </div>
+
+      <div class="reviews-grid">
+        <article class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"Me encantaron. Son muy cómodas y tienen un diseño excelente. Las recomiendo."</p>
+          <div class="review-author">
+            <div class="avatar">SM</div>
+            <div><strong>Sofía Martínez</strong><small>Compra verificada</small></div>
+          </div>
+        </article>
+
+        <article class="review-card reveal">
+          <div class="review-stars">★★★★★</div>
+          <p>"Muy buena calidad y llegaron rápido. Estoy muy conforme con la compra."</p>
+          <div class="review-author">
+            <div class="avatar">LF</div>
+            <div><strong>Lucas Fernández</strong><small>Compra verificada</small></div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="final-cta">
+      <div class="cta-glow"></div>
+      <span class="section-kicker">YOUR STYLE. YOUR RULES.</span>
+      <h2>DON'T FOLLOW.<br><span>MAKE MOVES.</span></h2>
+      <p>Encontrá tu próximo par y marcá tu propio camino.</p>
+      <a href="#coleccion" class="button button-primary">EXPLORAR COLECCIÓN ↗</a>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="contacto">
+    <div class="footer-top">
+      <div class="footer-brand">
+        <a href="#inicio" class="logo">URBAN<span>STORE.</span></a>
+        <p>Streetwear, sneakers y estilo urbano.<br>Encontrá tu propio camino.</p>
+      </div>
+
+      <div class="footer-column">
+        <h4>EXPLORAR</h4>
+        <a href="#inicio">Inicio</a>
+        <a href="#producto">Producto</a>
+        <a href="#coleccion">Colección</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>AYUDA</h4>
+        <a href="#contacto">Preguntas frecuentes</a>
+        <a href="#contacto">Envíos</a>
+        <a href="#contacto">Devoluciones</a>
+      </div>
+
+      <div class="footer-column">
+        <h4>CONTACTO</h4>
+        <span>contacto@urbanstore.com</span>
+        <span>11-1234-5678</span>
+        <span>Buenos Aires, Argentina</span>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 URBAN STORE. TODOS LOS DERECHOS RESERVADOS.</span>
+      <span>BUILT FOR THE <span class="footer-orange">NEXT GENERATION.</span></span>
+    </div>
+  </footer>
+
+  <!-- CARRITO -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+
+  <aside class="cart-drawer" id="cartDrawer">
+    <div class="cart-header">
+      <div>
+        <span class="section-kicker">YOUR SELECTION</span>
+        <h3>Mi carrito</h3>
+      </div>
+      <button class="close-cart" id="closeCart" aria-label="Cerrar carrito">✕</button>
+    </div>
+
+    <div class="cart-items" id="cartItems">
+      <p class="empty-cart">Tu carrito está vacío.</p>
+    </div>
+
+    <div class="cart-footer">
+      <div class="cart-total">
+        <span>TOTAL</span>
+        <strong id="cartTotal">$0</strong>
+      </div>
+      <button class="button button-primary checkout-button" id="checkoutButton">
+        FINALIZAR COMPRA ↗
+      </button>
+      <small>Compra de demostración. No se procesan pagos reales.</small>
+    </div>
+  </aside>
+
+  <div class="toast" id="toast"></div>
 
 </body>
 </html>
